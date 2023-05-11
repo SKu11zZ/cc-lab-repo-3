@@ -66,7 +66,7 @@
     </div>
     <br>
     <div class="question-container">
-      <h2>"Are you often silent alone" (higher scores mean you are less likely to be silent alone)</h2>
+      <h2>"Are you often silent alone without talking to others" (higher scores mean you are less likely to be silent alone)</h2>
       <input type="range" id="q11-rating" name="q11-rating" min="1" max="5">
       <p>Rating: <span id="q11-score">3</span></p>
     </div>
@@ -190,7 +190,7 @@
         } else if (totalScore >= 18) {
           scoreFeedback.textContent = 'Your psychological situation does not sound good and according to your rating you are obviously under a lot of psychological stress these days. Hope some of it is ok! You could ask your family or friends for help! Or you can seek counselling from a professional! ';
         } else if (totalScore >= 11) {
-          scoreFeedback.textContent = 'Your psychological situation does not sound good and according to your rating you are obviously under a lot of psychological stress these days. Hope some of it is ok! You could ask your family or friends for help! Or you can seek counselling from a professional! ';
+          scoreFeedback.textContent = 'Your situation sounds awful! I think you need to give yourself some space to rest as soon as possible and definitely do not be afraid to ask for help. Believe in yourself, you are really good and everything will be fine!';
         } else{
           scoreFeedback.textContent = 'You obviously got 1 point for every option and I am sorry you are in such a bad state of mind. You can also talk to me if you need help. My discord is SKu11zZ#9522. DM me if you need help and we will find out';
         }
