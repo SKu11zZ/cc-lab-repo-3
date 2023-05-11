@@ -179,7 +179,9 @@
         
         totalScoreDisplay.textContent = `Total Score: ${totalScore}`;
         
-        if (totalScore >= 42) {
+        if (totalScore >= 50) {
+          scoreFeedback.textContent = "...50 is not real. :( ";
+        } else if (totalScore >= 42) {
           scoreFeedback.textContent = "You are in great shape mentally and I am glad you are keeping a positive outlook on life!";
         } else if (totalScore >= 34) {
           scoreFeedback.textContent = 'Your mental state is fine, there are times when you feel stress, but you can overcome them and stay strong!';
@@ -187,8 +189,10 @@
           scoreFeedback.textContent = 'You can improve your mental state by improving your diet, or by taking a break and relaxing more. Everything will be fine and you will get better!';
         } else if (totalScore >= 18) {
           scoreFeedback.textContent = 'Your psychological situation does not sound good and according to your rating you are obviously under a lot of psychological stress these days. Hope some of it is ok! You could ask your family or friends for help! Or you can seek counselling from a professional! ';
+        } else if (totalScore >= 11) {
+          scoreFeedback.textContent = 'Your psychological situation does not sound good and according to your rating you are obviously under a lot of psychological stress these days. Hope some of it is ok! You could ask your family or friends for help! Or you can seek counselling from a professional! ';
         } else{
-          scoreFeedback.textContent = 'Your psychological situation sounds bad. If your work and life have been very stressful lately, try to give yourself some proper rest and personal space. If it is bad, I suggest you seek professional help as soon as possible!';
+          scoreFeedback.textContent = 'You obviously got 1 point for every option and I am sorry you are in such a bad state of mind. You can also talk to me if you need help. My discord is SKu11zZ#9522. DM me if you need help and we will find out';
         }
       });
     </script>
