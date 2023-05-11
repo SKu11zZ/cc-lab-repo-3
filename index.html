@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Mental state quick test</title>
+    <link rel="stylesheet" href="styles2.css">
+  </head>
+  <body>
+    <h1>Mental state quick test</h1>
+    <br>
+    <br>
+    <br>
+    
+    <div class="question-container">
+      <h2>"Rate your mood for the last week" (the higher the score, the better you think you are feeling)</h2>
+      <input type="range" id="q1-rating" name="q1-rating" min="1" max="5">
+      <p>Rating: <span id="q1-score">1</span></p>
+    </div>
+    <br>
+    <div class="question-container">
+      <h2>"Rate your level of irritability in the last week" (the higher the score, the more calm you think you are)</h2>
+      <input type="range" id="q2-rating" name="q2-rating" min="1" max="5">
+      <p>Rating: <span id="q2-score">1</span></p>
+    </div>
+    <br>
+    <div class="question-container">
+      <h2>"Rate your level of mental stress in the last week" (the higher the score, the less stressful you think you are)</h2>
+      <input type="range" id="q3-rating" name="q3-rating" min="1" max="5">
+      <p>Rating: <span id="q3-score">1</span></p>
+    </div>
+    <br>
+    <div class="question-container">
+      <h2>"Rate the quality of your sleep in the last week" (the higher the score, the better you think you slept)</h2>
+      <input type="range" id="q4-rating" name="q4-rating" min="1" max="5">
+      <p>Rating: <span id="q4-score">1</span></p>
+    </div>
+    <br>
+    <div class="question-container">
+      <h2>"Rate your concentration in the last week" (the higher the score, the better you think you are at staying focused)</h2>
+      <input type="range" id="q5-rating" name="q5-rating" min="1" max="5">
+      <p>Rating: <span id="q5-score">1</span></p>
+    </div>
+    <br>
+    <div class="question-container">
+      <h2>"Do you often get anxious about small things" (the higher the score the less likely you are to feel anxious)</h2>
+      <input type="range" id="q6-rating" name="q6-rating" min="1" max="5">
+      <p>Rating: <span id="q6-score">1</span></p>
+    </div>
+    <br>
+    <div class="question-container">
+      <h2>"Do you feel very confident in your work and studies" (higher scores mean you are more confident)</h2>
+      <input type="range" id="q7-rating" name="q7-rating" min="1" max="5">
+      <p>Rating: <span id="q7-score">1</span></p>
+    </div>
+    <br>
+    <div class="question-container">
+      <h2>"Do you care a lot about negative comments from others" (the higher the score the less you care about criticism from others)</h2>
+      <input type="range" id="q8-rating" name="q8-rating" min="1" max="5">
+      <p>Rating: <span id="q8-score">1</span></p>
+    </div>
+    <br>
+    <div class="question-container">
+      <h2>"Do you often talk to your friends about things you are upset about" (higher scores mean you talk to your friends more often)</h2>
+      <input type="range" id="q9-rating" name="q9-rating" min="1" max="5">
+      <p>Rating: <span id="q9-score">1</span></p>
+    </div>
+    <br>
+    <div class="question-container">
+      <h2>"Are you often silent alone" (higher scores mean you are less likely to be silent alone)</h2>
+      <input type="range" id="q11-rating" name="q11-rating" min="1" max="5">
+      <p>Rating: <span id="q11-score">1</span></p>
+    </div>
+    
+    <button id="calculate-score-btn">Get Total Score</button>
+    <p id="total-score"></p>
+    <p id="score-feedback"></p>
+
+
+
+
+    <script>
+      const q1Range = document.getElementById('q1-rating');
+      const q1Score = document.getElementById('q1-score');
+      
+      const q2Range = document.getElementById('q2-rating');
+      const q2Score = document.getElementById('q2-score');
+
+      const q3Range = document.getElementById('q3-rating');
+      const q3Score = document.getElementById('q3-score');
+
+      const q4Range = document.getElementById('q4-rating');
+      const q4Score = document.getElementById('q4-score');
+
+      const q5Range = document.getElementById('q5-rating');
+      const q5Score = document.getElementById('q5-score');
+
+      const q6Range = document.getElementById('q6-rating');
+      const q6Score = document.getElementById('q6-score');
+
+      const q7Range = document.getElementById('q7-rating');
+      const q7Score = document.getElementById('q7-score');
+
+      const q8Range = document.getElementById('q8-rating');
+      const q8Score = document.getElementById('q8-score');
+
+      const q9Range = document.getElementById('q9-rating');
+      const q9Score = document.getElementById('q9-score');
+
+      const q11Range = document.getElementById('q11-rating');
+      const q11Score = document.getElementById('q11-score');
+      
+      const calculateBtn = document.getElementById('calculate-score-btn');
+      const totalScoreDisplay = document.getElementById('total-score');
+      const scoreFeedback = document.getElementById('score-feedback');
+      
+
+
+
+
+      q1Range.addEventListener('input', () => {
+        q1Score.textContent = q1Range.value;
+      });
+      
+      q2Range.addEventListener('input', () => {
+        q2Score.textContent = q2Range.value;
+      });
+      
+      q3Range.addEventListener('input', () => {
+        q3Score.textContent = q3Range.value;
+      });
+
+      q4Range.addEventListener('input', () => {
+        q4Score.textContent = q4Range.value;
+      });
+
+      q5Range.addEventListener('input', () => {
+        q5Score.textContent = q5Range.value;
+      });
+
+      q6Range.addEventListener('input', () => {
+        q6Score.textContent = q6Range.value;
+      });
+
+      q7Range.addEventListener('input', () => {
+        q7Score.textContent = q7Range.value;
+      });
+
+      q8Range.addEventListener('input', () => {
+        q8Score.textContent = q8Range.value;
+      });
+
+      q9Range.addEventListener('input', () => {
+        q9Score.textContent = q9Range.value;
+      });
+
+      q11Range.addEventListener('input', () => {
+        q11Score.textContent = q11Range.value;
+      });
+
+
+
+
+      calculateBtn.addEventListener('click', () => {
+        const q1ScoreValue = parseInt(q1Range.value);
+        const q2ScoreValue = parseInt(q2Range.value);
+        const q3ScoreValue = parseInt(q3Range.value);
+        const q4ScoreValue = parseInt(q4Range.value);
+        const q5ScoreValue = parseInt(q5Range.value);
+        const q6ScoreValue = parseInt(q6Range.value);
+        const q7ScoreValue = parseInt(q7Range.value);
+        const q8ScoreValue = parseInt(q8Range.value);
+        const q9ScoreValue = parseInt(q9Range.value);
+        const q11ScoreValue = parseInt(q11Range.value);
+
+
+
+        
+        const totalScore = q1ScoreValue + q2ScoreValue + q3ScoreValue + q4ScoreValue + q5ScoreValue + q6ScoreValue + q7ScoreValue + q8ScoreValue + q9ScoreValue + q11ScoreValue  ;
+        
+        totalScoreDisplay.textContent = `Total Score: ${totalScore}`;
+        
+        if (totalScore >= 42) {'You are in great shape mentally and I am glad you are keeping a positive outlook on life!';
+        } else if (totalScore >= 34) {
+          scoreFeedback.textContent = 'Your mental state is fine, there are times when you feel stress, but you can overcome them and stay strong!';
+        } else if (totalScore >= 26) {
+          scoreFeedback.textContent = 'You can improve your mental state by improving your diet, or by taking a break and relaxing more. Everything will be fine and you will get better!';
+        } else if (totalScore >= 18) {
+          scoreFeedback.textContent = 'Your psychological situation does not sound good and according to your rating you are obviously under a lot of psychological stress these days. Hope some of it is ok! You could ask your family or friends for help! Or you can seek counselling from a professional! ';
+        } else{
+          scoreFeedback.textContent = 'Your psychological situation sounds bad. If your work and life have been very stressful lately, try to give yourself some proper rest and personal space. If it is bad, I suggest you seek professional help as soon as possible!';
+        }
+      });
+    </script>
+    <br>
+    <br>
+    <br>
+    <img class="image-class" src="123.jpg" alt="Image" width="1920" height="1080">
+  </body>>
+  </body>
+</html>
